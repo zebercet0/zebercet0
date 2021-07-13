@@ -1,5 +1,5 @@
 var score = 0;
-var clickPow = 50000;
+var clickPow = 1;
 
 var cursorCost = 15;
 var cursors = 0;
