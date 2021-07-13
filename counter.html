@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>Incremental game project</title>
+    <link rel="stylesheet" href="styles/sagostyle.css">
+</head>
+
+<body>
+
+    <div class="sectionLeft">
+        <center>
+            <div class="scoreContainer">
+                <span id="score">0</span> köz<br>
+                <span id="scorePS">0</span> köz/saniye<br>
+       
+        </div>
+        <br>
+        <img src="images/sagop.jpg" onclick="clickY(clickPow)" style="height: 256px;"><br>
+
+        <div class="sectionFooter">
+            <h5>Sagopa Kajmer Köz Clicker v0.1</h5>
+        </div>
+
+    </div>
+</center>
+    <div class="sectionRight">
+        <table class="shopButton" onclick="buyCursor()">
+            <tr>
+                <td id="image"><image src="images/mixtape.jpeg"></td>
+                <td id="nameAndCost">
+                    <p>Mixtape sat</p>
+                    <p><span id="cursorCost">15</span> köz | 1 köz / sn</p>
+                </td>
+                <td id="amount"><span id="cursors">0</span></td>
+            </tr>
+        </table>
+        <table class="shopButton" onclick="buySiviyag()">
+            <tr>
+                <td id="image"><image src="images/siviyag.jpg"></td>
+                <td id="nameAndCost">
+                    <p>Sıvıyağ al</p>
+                    <p><span id="siviyagCost">100</span> köz | 5 köz / sn</p>
+                </td>
+                <td id="amount"><span id="siviyags">0</span></td>
+            </tr>
+            <table class="shopButton" onclick="buyNargile()">
+                <tr>
+                    <td id="image"><image src="images/nargile.jpg"></td>
+                    <td id="nameAndCost">
+                        <p>Nargile tüttür</p>
+                        <p><span id="nargileCost">2500</span> köz | 75 köz/sn</p>
+                    </td>
+                    <td id="amount"><span id="nargiles">0</span></td>
+                </tr>
+        </table>
+        <br>
+   
+    </div>
+ 
+
+<script src="scripts/counter.js">
+</script>
+</body>
+</html>
+
+<!--
+    Kolerayı dövmeye git / Kırılan bel kemiği sayısı: 
+    Popçu 
+-->

@@ -1,0 +1,80 @@
+#score{
+    color: royalblue;
+}
+
+#scorePS{
+    color: royalblue;
+}
+
+.sectionLeft{
+    float: left;
+    width: 80%;
+}
+
+.sectionLeft img{
+    position: relative;
+    border-radius: 8px;
+    transition: .2s ease-in-out;
+}
+
+.sectionLeft img:hover{ transform:scale(1.02); }
+.sectionLeft img:active{ transform: scale(0.98); }
+
+.sectionRight{
+    float:right;
+    width: 20%;
+}
+
+.scoreContainer{
+    width: 25%;
+    padding: 12px;
+    text-align: center;
+    background-color: rgb(241, 208, 107, 0.3);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button{
+    background-color: tomato;
+
+}
+
+.shopButton{
+    background-color: thistle;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+.shopButton:hover{
+    background-color: teal;
+    transition: all .2s ease-in-out;
+}
+
+.shopButton img{
+    height: 64px;
+    width: 64px;
+}
+
+.shopButton #nameAndCost p{
+    margin: 0px;
+    width: 152px;
+}
+
+.shopButton #nameAndCost p:first-of-type{
+    font-size: 24px;
+}
+
+.shopButton #amount{
+    font-size: 42px;
+    color: whitesmoke;
+    font-family: Roboto;
+    width: 15%;
+}
+
+.sectionFooter{
+    margin-top: 20%;
+    
+}
