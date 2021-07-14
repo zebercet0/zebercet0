@@ -102,7 +102,7 @@ function SaveGame(){
 
 function ResetGame(){
     if(confirm("Are you sure you want to reset your game progres")){
-        var gameSave = ();
+        var gameSave;
         localStorage.setItem("gameSave", JSON.stringify(gameSave));
         location.reload();
     }
