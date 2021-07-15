@@ -18,8 +18,17 @@
         <button onclick="SaveGame();">Save Game</button>
         <button onclick="LoadGame();">Load Game</button>
         <div class="sectionFooter">
-            <h5>Sagopa Kajmer Köz Clicker v0.1</h5>
+            <h5>Sagopa Kajmer Köz Clicker | Closed beta | v0.3</h5>
             <button onclick="ResetGame();" style="background-color: coral;">Reset Game</button>
+            <p><h3>Changelog</h3></p>
+            <p>v0.3</p>
+            - Added one new buyable element (WIP)<br>
+            - Performance improvements.
+            <p>v0.2 </p>
+                - Added save/load/reset functions.<br>
+                - Graphical improvements.
+            <p>v0.1</p>
+                - Deployed the project.
         </div>
   
     </div>
@@ -49,9 +58,18 @@
                     <td id="image"><image src="images/nargile.jpg"></td>
                     <td id="nameAndCost">
                         <p>Nargile tüttür</p>
-                        <p><span id="nargileCost">2500</span> köz | 75 köz/sn</p>
+                        <p><span id="nargileCost">2500</span> köz | 15 köz/sn</p>
                     </td>
                     <td id="amount"><span id="nargiles">0</span></td>
+                </tr>
+                <table class="shopButton" onclick="buyScratch()">
+                <tr>
+                    <td id="image"><image src="images/nargile.jpg"></td>
+                    <td id="nameAndCost">
+                        <p>Scratch at</p>
+                        <p><span id="scratchCost">50000</span> köz | 75 köz/sn</p>
+                    </td>
+                    <td id="amount"><span id="scratchs">0</span></td>
                 </tr>
         </table>
         <br>
@@ -64,7 +82,26 @@
 </html>
 
 <!--
-    Kolerayı dövmeye git / Kırılan bel kemiği sayısı: 
-    Popçu sik
+    
+    Müritlerle takıl: 
+    Pop (?)
     Fuatı dava et: Zükerin sound effect
+    Elektrik boogie patlat
+    
+    
+    Karının belini kır
+
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    changelog
+    v0.0 - deploy
+    v0.1 - click element, 3 shop element
+    v0.2 - style improvements, save/load/reset functions
+    v0.3 - 
+
+
+    to-do list
+    - balance the prices
+    - sound effects
+    - unbuyed items remain locked until a köz count
+    - implement bootstrap, get changelog section in a closeable element
 -->

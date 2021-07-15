@@ -1,5 +1,5 @@
 var score = 0;
-var clickPow = 1;
+var clickPow = 50000;
 
 var cursorCost = 15;
 var cursors = 0;
@@ -7,7 +7,8 @@ var siviyagCost = 100;
 var siviyags = 0;
 var nargileCost = 2500;
 var nargiles = 0;
-
+var scratchCost = 50000;
+var scratchs = 0;
 
 function buyCursor(){
     if (score >= cursorCost){
@@ -49,13 +50,26 @@ function buyNargile(){
     }
 }
 
+function buyScratch(){
+    if (score >= scratchCost){
+        score = score - scratchCost;
+        scratchs++;
+        scratchCost = Math.round(scratchCost * 1.15);
+
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("scratchCost").innerHTML = scratchCost;
+        document.getElementById("scratchs").innerHTML = scratchs;
+        updateScorePerSe();
+    }
+}
+
 function clickY(amount){
     score = score + amount;
     document.getElementById("score").innerHTML = score;
 }
 
 function updateScorePerSe(){
-    scorePS = cursors + siviyags * 5 + nargiles * 75;
+    scorePS = cursors + siviyags * 5 + nargiles * 15 + scratchs * 75;
     document.getElementById("scorePS").innerHTML = scorePS;
 }
 
@@ -69,6 +83,8 @@ function LoadGame(){
     if (typeof savedGame.siviyags !== "undefined") siviyags = savedGame.siviyags;
     if (typeof savedGame.nargileCost !== "undefined") nargileCost = savedGame.nargileCost;
     if (typeof savedGame.nargiles !== "undefined") nargiles = savedGame.nargiles;
+    if (typeof savedGame.scratchCost !== "undefined") scratchCost = savedGame.scratchCost;
+    if (typeof savedGame.scratchs !== "undefined") scratchs = savedGame.scratchs;
     
 }
 
@@ -84,6 +100,9 @@ window.onload = function(){
     document.getElementById("score").innerHTML = score;
     document.getElementById("nargileCost").innerHTML = nargileCost;
     document.getElementById("nargiles").innerHTML = nargiles;
+    document.getElementById("score").innerHTML = score;
+    document.getElementById("scratchCost").innerHTML = scratchCost;
+    document.getElementById("scratchs").innerHTML = scratchs;
 };
 
 function SaveGame(){
@@ -95,7 +114,9 @@ function SaveGame(){
         siviyagCost: siviyagCost,
         siviyags: siviyags,
         nargileCost: nargileCost,
-        nargiles: nargiles
+        nargiles: nargiles,
+        scratchs: scratchs,
+        scratchCost: scratchCost
     };
     localStorage.setItem("gameSave", JSON.stringify(gameSave));
 }
@@ -110,7 +131,7 @@ function ResetGame(){
 
 setInterval(function (){
     score = score + cursors;
-    score = score + siviyags * 5 + nargiles * 15;
+    score = score + siviyags * 5 + nargiles * 15 + scratchs * 75;
     document.getElementById("score").innerHTML = score;
 
     document.title = score + " köz - Sago Clicker";
